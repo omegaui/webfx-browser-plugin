@@ -1,0 +1,26 @@
+>JDK Path
+-/usr/lib/jvm/jdk-17
+>Main Class
+-
+>Non-Java Project
+-false
+>Language Tag
+-0
+>Opened Editors on Main Tab Panel
+-project-root$/src/omega/javafx/starter/PluginGenerator.java
+-project-root$/src/omega/browser/WebBrowserEnvironmentMaintainer.java
+-project-root$/src/omega/browser/WebBrowserPlugin.java
+>Project Classpath : Required Native Libraries
+-/usr/lib/jvm/ext/javafx-sdk-17.0.1/lib
+>Project Classpath : Required Resource Roots
+-/home/ubuntu/Documents/Omega IDE/bin
+-/home/ubuntu/Documents/Omega IDE/res
+-project-root$/res
+>Project Classpath : Required Modules
+-/usr/lib/jvm/ext/javafx-sdk-17.0.1/lib/javafx.base.jar
+-/usr/lib/jvm/ext/javafx-sdk-17.0.1/lib/javafx.controls.jar
+-/usr/lib/jvm/ext/javafx-sdk-17.0.1/lib/javafx.graphics.jar
+-/usr/lib/jvm/ext/javafx-sdk-17.0.1/lib/javafx.fxml.jar
+-/usr/lib/jvm/ext/javafx-sdk-17.0.1/lib/javafx.media.jar
+-/usr/lib/jvm/ext/javafx-sdk-17.0.1/lib/javafx.swing.jar
+-/usr/lib/jvm/ext/javafx-sdk-17.0.1/lib/javafx.web.jar
