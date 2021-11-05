@@ -1,5 +1,7 @@
 package omega.browser;
-import javafx.stage.Stage;
+import javax.imageio.ImageIO;
+
+import java.awt.image.BufferedImage;
 
 import javafx.application.Platform;
 
@@ -12,15 +14,16 @@ import java.net.URL;
 import omega.plugin.Plugin;
 import omega.plugin.PluginCategory;
 public class WebBrowserPlugin implements Plugin{
-
+	public WebBrowserPane webBrowserPane;
+	public BufferedImage image;
+	
 	@Override
 	public void registerReactions() {
 		Screen.getPluginReactionManager().registerPlugin(this, PluginReactionEvent.EVENT_TYPE_IDE_INITIALIZED, (e)->{
 			new Thread(()->{
 				if(WebBrowserEnvironmentMaintainer.maintain(this) && Screen.getPluginManager().isPluginEnabled(Screen.getPluginManager().getPluginObject(getName()))){
 					Platform.startup(()->{
-						Stage stage = new Stage();
-						stage.show();
+						webBrowserPane = WebBrowserPane.newInstance();
 					});
 				}
 			}).start();
@@ -34,6 +37,16 @@ public class WebBrowserPlugin implements Plugin{
 	
 	@Override
 	public boolean enable() {
+		try{
+			if(image == null)
+				image = ImageIO.read(getClass().getResource("/icons8-web-design-48.png"));
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		Screen.getScreen().getToolMenu().toolsPopup.createItem("New Browser Tab", image, ()->{
+			Screen.getScreen().getTabPanel().addTab("WebBrowser", "webfx-tab-1", image, webBrowserPane, "", null);
+		});
 		return true;
 	}
 	@Override

@@ -47,8 +47,6 @@ public class WebBrowserEnvironmentMaintainer extends JDialog{
 	
 	public static NotificationPopup popup;
 	
-	public static String NATIVE_LIB_EXT = File.separator.equals("/") ? ".so" : ".dll";
-	
 	public WebBrowserEnvironmentMaintainer(WebBrowserPlugin plugin){
 		super(Screen.getScreen(), true);
 		this.plugin = plugin;
